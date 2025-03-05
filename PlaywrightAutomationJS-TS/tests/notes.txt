@@ -1,0 +1,10 @@
+expect assertion with css-selectors for locator
+for id : tag-name#id
+for class: tag-name.class
+for any attributes : [attribute= 'value']
+
+// example 
+    await page.locator('#username').fill("name");
+    await page.locator("#password").fill("pass");
+    await page.locator('[type="submit"]').click()
+    console.log(await page.locator('div.error').textContent())
