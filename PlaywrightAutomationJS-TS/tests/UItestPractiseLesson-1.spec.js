@@ -31,7 +31,7 @@ test('register password error',async({page})=>{
 
 })
 
-test.only('register success',async({page})=>{
+test('register success',async({page})=>{
    
 
     await page.goto('https://rahulshettyacademy.com/client');
@@ -90,8 +90,7 @@ test('find card name', async({page})=>{
     //const text= page.locator(".card-body").nth(0).textContent();
     // textContent() will wait until the page is loaded because waits till the element/locator is attached to the dom. 
     //console.log(await text);
-    await page.waitForLoadState("networkidle")
-   console.log( await page.locator(".card-body").allTextContents());
+    await page.waitForLoadState("networkidle");
    // allTextContents will return values only its placed after nth/first/last of the textContent() or waitForLoadState() , else return only [].
 
 })

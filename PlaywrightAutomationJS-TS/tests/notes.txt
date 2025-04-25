@@ -8,3 +8,7 @@ for any attributes : [attribute= 'value']
     await page.locator("#password").fill("pass");
     await page.locator('[type="submit"]').click()
     console.log(await page.locator('div.error').textContent())
+
+    promise.all => It will keep firing two steps parallelly and it will wait until both these promises are successfully fulfilled.
+
+    .split() => is used to split the word/string into new string as expected into an array 

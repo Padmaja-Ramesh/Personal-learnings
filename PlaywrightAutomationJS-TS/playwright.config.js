@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, devices, expect } from '@playwright/test';
+import { trace } from 'console';
 
 /**
  * Read environment variables from file.
@@ -23,7 +24,9 @@ const config = ({
   },
   reporter: 'html',
   use: {
-    browserName: 'firefox'
+    browserName: 'firefox',
+    trace: 'retain-on-failure',
+    screenshot:'on'
   }
 
 
